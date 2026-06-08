@@ -1,0 +1,285 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background colour and font*/
+
+body{ font-family: sans-serif;
+  background-color: #f0f4ff;  
+  color: #333;
+  padding: 30px 16px;}
+
+/* element selector for h1*/
+h1{ text-align: center;
+  font-size: 26px;
+  color: #1b1c1d;
+  margin-bottom: 4px;}
+
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 26px;
+  display: block;
+  width: 100%;}
+
+/*Used flexbox to make the three cards side by side*/
+#summary{ display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 12px;
+  width: 90%;
+  max-width: 640px;
+  margin: auto; }
+
+/* class selector for the cards showing summary*/
+.summary-card {background-color: white;
+  border-radius: 10px;
+  padding: 14px 10px;
+  text-align: center;
+  border: 1.5px solid white;}
+
+.summary-card span {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #4a6cf7;}
+
+.summary-card p {
+  font-size: 11px;
+  color: #807f7f;
+  margin-top: 3px;}
+
+/* ID selector for the form selection*/
+#form-section  {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto 24px auto;
+  border: 1.5px solid #e0e7ff;}
+
+#form-section h2 {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 14px;}
+
+/* element selectors for label, input and select in the form */
+#form-section label{ 
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px; }
+
+#form-section input, #form-section select
+ {
+  display: block;
+  width: 100%;
+  padding: 9px 12px;
+  border: 1.5px solid #dde3ff;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background-color: #f8f9ff;
+  color: #333;
+  outline: none;
+}
+
+/* when input is clicked by user border color changes*/
+#form-section input:focus,
+#form-section select:focus
+{border-color: #4a6cf7;
+  background-color: white; 
+}
+
+/* ID selector for error message in a red color so that it stands out*/
+#error-message {
+  font-size: 12px;
+  color: #d63031;
+  background-color: #fff0f0;
+  border-left: 3px solid #d63031;
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: none;
+}
+#error-message.visible {
+  display: block;
+}
+
+/*ID selector for add button*/
+#add-button {
+  background-color: #153312;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+}
+#add-button:hover {
+  background-color: #22992e;
+}
+
+/*ID selector for the habits section*/
+#habits-section {
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+#habits-section h2 {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/*ID selector for the habits list*/
+/*using the flex-direction to stack habit colors vvertical*/
+#habit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*class selector for each habit card*/
+.habit-item {
+  background-color: white;
+  border-radius: 10px ;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1.5px solid #e0e7ff;
+}
+
+.habit-item.done-today {
+  border-color: #a3e6c8;
+  background-color: #f4fff9;
+  opacity: 0.8;
+}
+
+.habit-item.done-today .habit-name {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.habit-item input
+{
+  width: 17px;
+  height: 17px;
+  accent-color: #4a6cf7;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/*class selector for habitat content*/
+.habit-information {
+  flex: 1;
+}
+
+.habit-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.habit-meta {
+  font-size: 11px;
+  color: #999;
+  margin-top: 3px;
+}
+
+/* category badge with different background-color per category */
+.cat-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 500;
+  margin-right: 5px;
+}
+ 
+.cat-health  { background-color: #e8f7ee; color: #2d8a55; }
+.cat-study   { background-color: #e8eeff; color: #3a5be0; }
+.cat-fitness { background-color: #fff3e8; color: #c96a1a; }
+.cat-mindset { background-color: #f3e8ff; color: #7a3ec8; }
+.cat-other   { background-color: #f0f0f0; color: #555; }
+ 
+.streak {
+  font-size: 12px;
+  color: #4a6cf7;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+ 
+.button-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 18px;
+  padding: 0 4px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+ 
+.button-delete:hover {
+  color: #d63031;
+}
+ 
+.empty-message {
+  text-align: center;
+  color: #bbb;
+  font-size: 13px;
+  padding: 30px 0;
+}
+ 
+/* media queries for responsive design*/
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+ 
+  #summary {
+    flex-direction: column;
+  }
+ 
+  .summary-card {
+    width: 100%;
+  }
+ 
+  .habit-item {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+ 
+@media (min-width: 768px) {
+  #summary {
+    flex-direction: row;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

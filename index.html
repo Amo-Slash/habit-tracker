@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1>Habit Tracker</h1>
+     <p class="subtitle"><em>Track your daily habits and build streaks</em></p>
+
+ <div id="summary">
+    <div class="summary-card">
+    <span id="total-count">0</span>
+    <p>Total Habits</p>
+    </div>
+    <div class="summary-card">
+    <span id="done-count">0</span>
+    <p>Done Today</p>
+    </div>
+    <div class="summary-card">
+    <span id="pct">0%</span>
+    <p>Completion</p>
+    </div>
+  </div>
+ 
+
+  <div id="form-section">
+    <h2>Add a new habit</h2>
+ 
+    <label for="habit-name">Habit Name</label>
+    <input type="text" id="habit-name" placeholder="e.g. Read 30 min" />
+ 
+    <label for="habit-target">Target (days per week)</label>
+    <input type="number" id="habit-target" placeholder="1 to 7" min="1" max="7" />
+ 
+    <label for="habit-category">Category</label>
+    <select id="habit-category">
+      <option value="">Select a category</option>
+      <option value="health">Health</option>
+      <option value="study">Study</option>
+      <option value="fitness">Fitness</option>
+      <option value="mindset">Mindset</option>
+      <option value="other">Other</option>
+    </select>
+ 
+    <p id="error-message"></p>
+ 
+    <button id="add-button">Add Habit</button>
+  </div>
+ 
+  <div id="habits-section">
+    <h2>Your Habits</h2>
+    <div id="habit-list">
+      <p id="empty-message">No habits. Add one </p>
+    </div>
+  </div>
+ 
+  <script src="script.js"></script>
+
+     
+</body>
+</html>
